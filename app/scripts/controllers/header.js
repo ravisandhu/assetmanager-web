@@ -9,9 +9,15 @@
  */
 angular.module('assetmanagerWebApp')
   .controller('HeaderCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    $scope.navigationItems = [{
+      name: 'Home',
+      url: 'home',
+      active: true
+    }, {
+      name: 'About',
+      url: 'about',
+      active: false
+    }];
+
   });
