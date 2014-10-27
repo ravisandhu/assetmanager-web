@@ -8,7 +8,7 @@
  * Controller of the assetmanagerWebApp
  */
 angular.module('assetmanagerWebApp')
-  .controller('LoginCtrl', function ($scope) {
+  .controller('LoginCtrl', function ($scope, api) {
 
     $scope.formData = {
     };
@@ -29,7 +29,7 @@ angular.module('assetmanagerWebApp')
 
     $scope.login = function () {
 
-
+      api.login($scope.formData.emailAddress, $scope.formData.password);
 
     };
 
