@@ -9,9 +9,28 @@
  */
 angular.module('assetmanagerWebApp')
   .controller('LoginCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    $scope.formData = {
+    };
+
+    $scope.formFields = [{
+      key: 'emailAddress',
+      type: 'email',
+      label: 'Email address'
+    }, {
+      key: 'password',
+      type: 'password',
+      label: 'Password'
+    }];
+
+    $scope.formOptions = {
+      uniqueFormId: 'login'
+    };
+
+    $scope.login = function () {
+
+
+
+    };
+
   });

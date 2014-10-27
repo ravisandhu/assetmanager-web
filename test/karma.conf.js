@@ -14,7 +14,7 @@ module.exports = function(config) {
     basePath: '../',
 
     // testing framework to use (jasmine/mocha/qunit/...)
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'sinon', 'chai'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -26,9 +26,14 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/angular-formly/dist/formly.min.js',
+      'bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.min.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+      'node_modules/sinon/pkg/sinon.js',
+      'node_modules/chai/chai.js',
+      'node_modules/sinon-chai/lib/sinon-chai.js'
     ],
 
     // list of files / patterns to exclude
@@ -52,7 +57,9 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-mocha',
+      'karma-chai',
+      'karma-sinon'
     ],
 
     // Continuous Integration mode
