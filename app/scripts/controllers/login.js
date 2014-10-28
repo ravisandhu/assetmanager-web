@@ -29,7 +29,13 @@ angular.module('assetmanagerWebApp')
 
     $scope.login = function () {
 
-      api.login($scope.formData.emailAddress, $scope.formData.password);
+      api.login($scope.formData.emailAddress, $scope.formData.password)
+        .then(function (loggedIn) {
+          console.log(loggedIn);
+        })
+        .catch(function () {
+          console.error('boo');
+        });
 
     };
 
